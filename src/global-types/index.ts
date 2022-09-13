@@ -5,7 +5,7 @@ export type TDirection = {
 
 export type TDirections = TDirection[]
 
-export type TConvertaion = {
+export type TConvertation = {
   from: TDirection,
   to: TDirections
 }

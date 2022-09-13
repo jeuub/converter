@@ -1,8 +1,8 @@
-import { AxiosResponse } from 'axios';
-import type { TConvertaion } from '@/global-types';
+import {AxiosResponse} from 'axios';
+import type {TConvertation} from '@/global-types';
 
-import { request } from '../../configure-network';
+import {request} from '../../configure-network';
 
-export const getFilteredDirections = async (): Promise<AxiosResponse<TConvertaion>> => {
-  return await request<TConvertaion>('get', 'filter.json')
+export const getFilteredDirections = async (): Promise<AxiosResponse<TConvertation>> => {
+  return await request<TConvertation>('get', 'filter.json')
 }
