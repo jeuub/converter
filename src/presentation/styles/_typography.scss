@@ -1,0 +1,44 @@
+/* Headlines */
+@mixin headline-large {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+@mixin headline-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+@mixin headline-small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+/* Text */
+@mixin text-large {
+  font-size: 2.5em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+@mixin text-medium {
+  font-size: 1.875em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+@mixin text-semi-medium {
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1em;
+}
+
+@mixin text-regular {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1em;
+}

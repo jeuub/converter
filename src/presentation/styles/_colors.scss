@@ -1,0 +1,27 @@
+/*
+  Full color palette
+*/
+
+$white: #ffffff;
+$black: #000000;
+$gray: #d6dbe1;
+$orange: #ef807f;
+
+/*
+  Semantic colors
+*/
+
+/* Backgrounds */
+$color-background-main: $white;
+
+/*Borders*/
+$color-border-regular: $gray;
+
+/* Text */
+$color-text-regular: $black;
+$color-text-regular-inverse: $white;
+$color-text-light: $gray;
+$color-text-orange: $orange;
+
+/* Buttons */
+$color-button-regular: $orange;
