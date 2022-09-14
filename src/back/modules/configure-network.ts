@@ -13,6 +13,5 @@ enum methods {
 type method = keyof typeof methods;
 
 export async function request<T>(method: method, path: string, data?: unknown) {
-  console.log(API_URL + path);
   return await axios[method]<T>(API_URL + path, data);
 }

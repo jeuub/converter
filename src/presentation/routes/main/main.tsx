@@ -5,39 +5,20 @@ import { fetchDirection } from "@/state";
 import { DirectionTags, TDirection, TDirections } from "@/global-types";
 
 import { InputSelect, Button } from "@/presentation/components";
+
 import {
   useAppDispatch,
   useAppSelector,
   useFilteredDirection,
 } from "@/presentation/hooks";
 
-import styles from "./main.module.scss";
+import { images } from "@/presentation/components";
+
 import { enumToDescriptedArray } from "@/presentation/utils";
 
-const directionTypes = enumToDescriptedArray({ all: "4", ...DirectionTags });
+import styles from "./main.module.scss";
 
-const options = [
-  {
-    id: 1,
-    // image: "https://cdn.cdnlogo.com/logos/b/46/bitcoin.svg",
-    content: "BTC",
-  },
-  {
-    id: 2,
-    image: "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg",
-    content: "ETH",
-  },
-  {
-    id: 3,
-    // image: "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg",
-    content: "USDT",
-  },
-  {
-    id: 4,
-    // image: "https://cdn.cdnlogo.com/logos/e/81/ethereum-eth.svg",
-    content: "USDTTRC",
-  },
-];
+const directionTypes = enumToDescriptedArray({ all: "4", ...DirectionTags });
 
 const getTypeName = (type: string): string | undefined => {
   switch (type) {
@@ -58,6 +39,7 @@ const directionsToOption = (array: TDirections) => {
     content: el.name,
     code: el.code,
     tag: el.tag,
+    image: images.find((image) => image.code === el.code)?.image,
   }));
 };
 
@@ -80,6 +62,12 @@ const TransactionFrom = (props: { code: string | undefined }) => {
             key={type.id}
             style={typeTo === type.description ? "filled" : "text"}
             onClick={() => setTypeTo(type.description)}
+            disabled={
+              !filteredDirections.some(
+                (el) =>
+                  el.tag === type.description || type.description === "all"
+              )
+            }
           >
             {getTypeName(type.description)}
           </Button>

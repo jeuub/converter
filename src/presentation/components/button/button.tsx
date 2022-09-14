@@ -16,13 +16,18 @@ type ButtonProps = {
   style: keyof typeof ButtonStyle;
   className?: ClassName;
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 export const Button = (props: ButtonProps) => {
-  const { children, style, onClick } = props;
+  const { children, style, onClick, disabled } = props;
 
   return (
-    <button className={clsx(styles.button, styles[style])} onClick={onClick}>
+    <button
+      className={clsx(styles.button, styles[style])}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );
