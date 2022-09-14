@@ -15,30 +15,27 @@ type SelectOption = {
   image?: imageSrc;
   id: OptionId;
   content: string;
+  tag: string;
 };
 
 type InputSelectProps = {
   placeholder?: string;
   className?: ClassName;
   options: SelectOption[];
-  defaultChecked: OptionId;
-  onChange?: (option: SelectOption) => void;
+  defaultValue?: SelectOption;
+  onChange?: (option: any) => void;
   min?: number;
   max?: number;
   step?: number;
 };
 
 export const InputSelect = (props: InputSelectProps): JSX.Element => {
-  const {
-    className,
-    placeholder,
-    options,
-    defaultChecked,
-    onChange,
-    min,
-    max,
-  } = props;
-  const [currentOption, setCurrentOption] = useState<SelectOption>();
+  const { className, placeholder, options, defaultValue, onChange, min, max } =
+    props;
+
+  const [currentOption, setCurrentOption] = useState<SelectOption | undefined>(
+    defaultValue ?? options[0]
+  );
   const [active, setActive] = useState<boolean>(false);
   const currentOptionRef = useRef(null);
   const otherOptions = options.filter(
@@ -53,12 +50,6 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
   };
 
   useEffect(() => {
-    const option = options[Number(defaultChecked)];
-    if (!option) return;
-    setCurrentOption(option);
-  }, [options]);
-
-  useEffect(() => {
     if (!onChange || !currentOption) return;
 
     onChange(currentOption);
@@ -67,6 +58,9 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
   useOnClickOutside(currentOptionRef, () => {
     setActive(false);
   });
+
+  const hidden = !options.some((el) => el.tag === currentOption?.tag);
+  console.log();
 
   return (
     <div
@@ -83,11 +77,17 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
         placeholder={placeholder}
       />
       <div className={styles.optionContainer} ref={currentOptionRef}>
-        <button className={styles.currentOption} onClick={toggleActive}>
-          {currentOption?.image ? (
-            <img src={currentOption?.image} alt="" width={40} height={40} />
+        <button
+          className={clsx(styles.currentOption, {
+            [styles.currentOptionActive]: active,
+          })}
+          onClick={toggleActive}
+          disabled={!options.length}
+        >
+          {!currentOption?.image || hidden ? (
+            <p>{!hidden && currentOption?.content}</p>
           ) : (
-            <p>{currentOption?.content}</p>
+            <img src={currentOption?.image} alt="" width={40} height={40} />
           )}
           {Icons("ARROW_DOWN")}
         </button>

@@ -13,8 +13,9 @@ export type TDirection = {
 export type TDirections = TDirection[];
 
 export type TConvertation = {
-  from: Omit<TDirection, "tag">;
+  from: TDirection;
   to: TDirections;
 };
+export type TConvertations = TConvertation[];
 
 export type ClassName = string;

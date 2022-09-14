@@ -2,212 +2,262 @@
   {
     "from": {
       "code": "BTC",
-      "name": "Bitcoin BTC "
+      "name": "Bitcoin BTC ",
+      "tag": "crypto"
     },
     "to": [
       {
         "code": "CASHRUB",
-        "name": " Наличные RUB"
+        "name": " Наличные RUB",
+        "tag": "cash"
       },
       {
         "code": "CASHUSD",
-        "name": " Наличные USD"
+        "name": " Наличные USD",
+        "tag": "cash"
       },
       {
         "code": "SBERRUB",
-        "name": " Сбербанк RUB"
+        "name": " Сбербанк RUB",
+        "tag": "bank"
       },
       {
         "code": "ACRUB",
-        "name": " Альфа-банк RUB"
+        "name": " Альфа-банк RUB",
+        "tag": "bank"
       },
       {
         "code": "TCSBRUB",
-        "name": " Тинькофф RUB"
+        "name": " Тинькофф RUB",
+        "tag": "bank"
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC-20 USDTTRC"
+        "name": " Tether TRC-20 USDTTRC",
+        "tag": "crypto"
       }
     ]
   },
   {
     "from": {
       "code": "ETH",
-      "name": "Ethereum ETH "
+      "name": "Ethereum ETH ",
+      "tag": "crypto"
     },
     "to": [
       {
         "code": "CASHUSD",
-        "name": " Наличные USD"
+        "name": " Наличные USD",
+        "tag": "cash"
       },
       {
         "code": "CASHRUB",
-        "name": " Наличные RUB"
+        "name": " Наличные RUB",
+        "tag": "cash"
       },
       {
         "code": "SBERRUB",
-        "name": " Сбербанк RUB"
+        "name": " Сбербанк RUB",
+        "tag": "bank"
       },
       {
         "code": "ACRUB",
-        "name": " Альфа-банк RUB"
+        "name": " Альфа-банк RUB",
+        "tag": "bank"
+
       },
       {
         "code": "TCSBRUB",
-        "name": " Тинькофф RUB"
+        "name": " Тинькофф RUB",
+        "tag": "bank"
+
       }
     ]
   },
   {
     "from": {
       "code": "CASHUSD",
-      "name": "Наличные USD "
+      "name": "Наличные USD ",
+      "tag": "cash"
     },
     "to": [
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "ETH",
-        "name": " Ethereum ETH"
+        "name": " Ethereum ETH",
+        "tag": "crypto"
+
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC20 USDT"
+        "name": " Tether TRC20 USDT",
+        "tag": "crypto"
       }
     ]
   },
   {
     "from": {
       "code": "CASHRUB",
-      "name": "Наличные RUB "
+      "name": "Наличные RUB ",
+      "tag": "cash"
     },
     "to": [
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "ETH",
-        "name": " Ethereum ETH"
+        "name": " Ethereum ETH",
+        "tag": "crypto"
+
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC20 USDT"
+        "name": " Tether TRC20 USDT",
+        "tag": "crypto"
+
       }
     ]
   },
   {
     "from": {
       "code": "ACRUB",
-      "name": "Альфа-банк RUB "
+      "name": "Альфа-банк RUB ",
+      "tag": "bank"
     },
     "to": [
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "ETH",
-        "name": " Ethereum ETH"
+        "name": " Ethereum ETH",
+        "tag": "crypto"
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC20 USDT"
+        "name": " Tether TRC20 USDT",
+        "tag": "crypto"
       }
     ]
   },
   {
     "from": {
       "code": "SBERRUB",
-      "name": "Сбербанк RUB "
+      "name": "Сбербанк RUB ",
+      "tag": "bank"
     },
     "to": [
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "ETH",
-        "name": " Ethereum ETH"
+        "name": " Ethereum ETH",
+        "tag": "crypto"
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC20 USDT"
+        "name": " Tether TRC20 USDT",
+        "tag": "crypto"
       },
       {
         "code": "PMUSD",
-        "name": " PerfectMoney USD"
+        "name": " PerfectMoney USD",
+        "tag": "bank"
       },
       {
         "code": "TRX",
-        "name": " TRON TRX"
+        "name": " TRON TRX",
+        "tag": "crypto"
       },
       {
         "code": "P24UAH",
-        "name": " Приват24 UAH"
+        "name": " Приват24 UAH",
+        "tag": "bank"
       },
       {
         "code": "MONOBUAH",
-        "name": " Монобанк UAH"
+        "name": " Монобанк UAH",
+        "tag": "bank"
       },
       {
         "code": "CARDUAH",
-        "name": " Visa/Mastercard UAH"
+        "name": " Visa/Mastercard UAH",
+        "tag": "bank"
       }
     ]
   },
   {
     "from": {
       "code": "TCSBRUB",
-      "name": "Тинькофф RUB "
+      "name": "Тинькофф RUB ",
+      "tag": "bank"
     },
     "to": [
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "ETH",
-        "name": " Ethereum ETH"
+        "name": " Ethereum ETH",
+        "tag": "crypto"
       },
       {
         "code": "USDTTRC",
-        "name": " Tether TRC20 USDT"
+        "name": " Tether TRC20 USDT",
+        "tag": "crypto"
       },
       {
         "code": "PMUSD",
-        "name": " PerfectMoney USD"
+        "name": " PerfectMoney USD",
+        "tag": "bank"
       },
       {
         "code": "TRX",
-        "name": " TRON TRX"
+        "name": " TRON TRX",
+        "tag": "crypto"
       },
       {
         "code": "P24UAH",
-        "name": " Приват24 UAH"
+        "name": " Приват24 UAH",
+        "tag": "bank"
       },
       {
         "code": "MONOBUAH",
-        "name": " Монобанк UAH"
+        "name": " Монобанк UAH",
+        "tag": "bank"
       }
     ]
   },
   {
     "from": {
       "code": "USDTTRC",
-      "name": "Tether TRC20 USDT "
+      "name": "Tether TRC20 USDT ",
+      "tag": "crypto"
     },
     "to": [
       {
         "code": "ACRUB",
-        "name": " Альфа RUB"
+        "name": " Альфа RUB",
+        "tag": "bank"
       },
       {
         "code": "TCSBRUB",
-        "name": " Тинькофф RUB"
+        "name": " Тинькофф RUB",
+        "tag": "bank"
       },
       {
         "code": "SBERRUB",
@@ -215,43 +265,53 @@
       },
       {
         "code": "CARDRUB",
-        "name": " Visa/Mastercard RUB"
+        "name": " Visa/Mastercard RUB",
+        "tag": "bank"
       },
       {
         "code": "QWRUB",
-        "name": " Qiwi RUB"
+        "name": " Qiwi RUB",
+        "tag": "bank"
       },
       {
         "code": "CASHRUB",
-        "name": " Наличные RUB"
+        "name": " Наличные RUB",
+        "tag": "cash"
       },
       {
         "code": "CASHUSD",
-        "name": " Наличные USD"
+        "name": " Наличные USD",
+        "tag": "cash"
       },
       {
         "code": "CARDUAH",
-        "name": " Visa/Mastercard UAH"
+        "name": " Visa/Mastercard UAH",
+        "tag": "bank"
       },
       {
         "code": "MONOBUAH",
-        "name": " Монобанк UAH"
+        "name": " Монобанк UAH",
+        "tag": "bank"
       },
       {
         "code": "WIREUAH",
-        "name": " Любой банк UAH"
+        "name": " Любой банк UAH",
+        "tag": "bank"
       },
       {
         "code": "OSDBUAH",
-        "name": " Ощадбанк UAH"
+        "name": " Ощадбанк UAH",
+        "tag": "bank"
       },
       {
         "code": "P24UAH",
-        "name": " Приват24 UAH"
+        "name": " Приват24 UAH",
+        "tag": "bank"
       },
       {
         "code": "BTC",
-        "name": " Bitcoin BTC"
+        "name": " Bitcoin BTC",
+        "tag": "crypto"
       },
       {
         "code": "CASHAED",
@@ -259,7 +319,8 @@
       },
       {
         "code": "CNTRUB",
-        "name": " Qiwi Contact RUB"
+        "name": " Qiwi Contact RUB",
+        "tag": "bank"
       }
     ]
   }
