@@ -9,3 +9,5 @@ export type TConvertation = {
   from: TDirection,
   to: TDirections
 }
+
+export type ClassName = string;

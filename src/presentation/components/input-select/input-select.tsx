@@ -4,6 +4,8 @@ import clsx from '@/lib/clsx'
 import {Icons} from "@/presentation/components";
 import {useOnClickOutside} from '@/presentation/hooks';
 
+import {ClassName} from "@/global-types";
+
 import styles from './input-select.module.scss';
 
 type imageSrc = string;
@@ -16,20 +18,28 @@ type SelectOption = {
 
 type InputSelectProps = {
   placeholder?: string;
-  className?: string;
+  className?: ClassName;
   options: SelectOption[];
   defaultChecked: OptionId;
   onChange?: (option: SelectOption) => void;
+  min?: number;
+  max?: number;
+  step?: number;
 }
 
 export const InputSelect = (props: InputSelectProps): JSX.Element => {
-  const {className, placeholder, options, defaultChecked, onChange} = props;
+  const {className, placeholder, options, defaultChecked, onChange, min, max} = props;
   const [currentOption, setCurrentOption] = useState<SelectOption>();
   const [active, setActive] = useState<boolean>(false);
   const currentOptionRef = useRef(null);
   const otherOptions = options.filter(option => option.id !== currentOption?.id);
 
   const toggleActive = () => setActive(!active);
+
+  const setNewOption = (option: SelectOption) => {
+    setActive(false);
+    setCurrentOption(option);
+  }
 
   useEffect(() => {
     const option = options[Number(defaultChecked)];
@@ -44,24 +54,23 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
 
   }, [currentOption]);
 
-  useOnClickOutside(currentOptionRef, ()=>{
+  useOnClickOutside(currentOptionRef, () => {
     setActive(false)
   })
 
-  console.log(otherOptions)
   return (
-    <div className={clsx(styles.container, {className: Boolean(className)})}>
-      <input className={styles.input} type="number" placeholder={placeholder}/>
+    <div className={clsx(styles.container, {[className as string]: Boolean(className)})}>
+      <input step={0.1} min={min} max={max} className={styles.input} type="number" placeholder={placeholder}/>
       <div className={styles.optionContainer} ref={currentOptionRef}>
         <button className={styles.currentOption} onClick={toggleActive}>
-          <img src={currentOption?.image} alt=""/>
+          <img src={currentOption?.image} alt="" width={40} height={40}/>
           {Icons('ARROW_DOWN')}
         </button>
         {active && (
           <div className={styles.otherOptions}>
             {otherOptions.map(option => (
-              <button className={styles.otherOption} onClick={() => setCurrentOption(option)}>
-                <img src={option.image} alt=""/>
+              <button key={option.id} className={styles.otherOption} onClick={() => setNewOption(option)}>
+                <img src={option.image} alt="" width={40} height={40}/>
               </button>
             ))}
           </div>

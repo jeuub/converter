@@ -1,8 +1,10 @@
 import React from 'react';
 
-import {InputSelect} from '@/presentation/components'
+import {InputSelect, Button} from '@/presentation/components'
 
-import style from './main.module.scss';
+
+
+import styles from './main.module.scss';
 
 const options = [
   {
@@ -15,11 +17,26 @@ const options = [
   },
 ];
 
+
 export function Main(): JSX.Element {
   return (
-    <main>
-      <h1 className={style.heading}>Main Page</h1>
-      <InputSelect defaultChecked={0} placeholder={"0.24891 - 12.061"} options={options}/>
+    <main className={styles.main}>
+      <h1 className={styles.heading}>Выгодный обменный пункт электронных денег</h1>
+      <div className={styles.card}>
+        <div className={styles.transaction}>
+          <h3>Отдаете</h3>
+          <Button style='filled'>Все</Button>
+          <InputSelect min={0.24891} max={12.061} className={styles.inputSelect} defaultChecked={0} placeholder={"0.24891 - 12.061"} options={options}/>
+          <button className={styles.swapButton}>
+            <img src="/assets/swap.png" alt="" width={40} height={40}/>
+          </button>
+        </div>
+        <div className={styles.transaction}>
+          <h3>Получаете</h3>
+          <Button style='filled'>Все</Button>
+          <InputSelect min={0.24891} max={12.061} className={styles.inputSelect} defaultChecked={0} placeholder={"0.24891 - 12.061"} options={options}/>
+        </div>
+      </div>
     </main>
   )
 }

@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.button {
+  padding: 8px  10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  outline: 1px solid transparent;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.button:active {
+  transform: scale(.9);
+}
+
+.filled {
+  background: $color-button-regular;
+  color: $color-text-regular-inverse
+}
+
+.text:hover {
+  outline: 1px solid $color-button-regular;
+}
+
+.outlined {
+  outline: 1px solid $color-button-regular;
+}

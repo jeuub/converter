@@ -1,3 +1,60 @@
+@import '../../styles/variables';
+
+.main {
+  height: 100%;
+}
+
 .heading {
+  @include visually-hidden;
   font-size: 2em;
+}
+
+.card {
+  padding: 20px;
+  margin: 20px;
+  position: relative;
+}
+
+.transaction {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.swapButton {
+  position: absolute;
+  right: 10px;
+  bottom: -50%;
+  width: 40px;
+  border: none;
+  background: transparent;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  z-index: 1;
+  transition: .3s;
+}
+
+.swapButton:active {
+  transform: rotate(-90deg) scale(.9);
+}
+
+.swapButton > img {
+  max-width: none;
+}
+
+.inputSelect {
+  width: 100%;
+}
+
+@media screen and (min-width: $medium) {
+  .card {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }

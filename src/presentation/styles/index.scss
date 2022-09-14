@@ -26,21 +26,18 @@ h1 {
   }
 
   margin: $space-16 0;
-  text-transform: uppercase;
 }
 
 h2 {
   @include headline-medium;
 
   margin: $space-16 0;
-  text-transform: uppercase;
 }
 
 h3 {
   @include headline-small;
 
   margin: $space-16 0;
-  text-transform: uppercase;
 }
 
 p {
@@ -54,3 +51,4 @@ p:first-child {
 img {
   max-width: 100%;
 }
+

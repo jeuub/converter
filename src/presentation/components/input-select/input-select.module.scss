@@ -1,7 +1,6 @@
 @import '../../styles/variables';
 
 .container {
-  max-width: 600px;
   display: flex;
   height: 40px;
 }
@@ -15,10 +14,14 @@
   align-items: center;
   background: transparent;
   border: 1px solid $color-border-regular;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+
   & > img {
     height: 30px;
     width: 30px;
   }
+
   & > svg {
     width: 15px;
     height: 10px;
@@ -31,36 +34,52 @@
   height: 40px;
   padding: $space-8 $space-12;
   border: 1px solid $color-border-regular;
-  border-radius: 10px 0 0 10px;
+  border-radius: 8px 0 0 8px;
   font-weight: 300;
   font-family: 'Montserrat', sans-serif;
+
   &:focus {
     outline: none;
   }
 }
 
-.option-container {
+.input {
+  text-overflow: ellipsis;
+}
+
+.optionContainer {
   position: relative;
 }
 
-.other-options {
+.otherOptions {
   position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  background: $white;
+  border-radius: 8px;
+  border: 1px solid $color-border-regular;
+  -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+  z-index: 2;
 }
 
 .otherOption {
   height: 40px;
   width: 60px;
-  padding: 0;
-  padding-right:15px;
+  padding: 0 15px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 1px solid $color-border-regular;
+  border:none;
+  cursor: pointer;
+
   & > img {
     height: 30px;
     width: 30px;
   }
+
   & > svg {
     width: 15px;
     height: 10px;

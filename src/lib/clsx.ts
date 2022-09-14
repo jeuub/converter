@@ -1,4 +1,5 @@
-type ClassName = string;
+import {ClassName} from "@/global-types";
+
 type ClassNameObject = {
   [key:string]: boolean;
 }
