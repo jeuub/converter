@@ -1,0 +1,1 @@
+export {fetchDirection} from './directions'
