@@ -1,3 +1,3 @@
 export enum URL {
-  MAIN = '/',
+  MAIN = "/",
 }

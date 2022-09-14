@@ -1,1 +1,1 @@
-export {fetchDirection} from './directions'
+export { fetchDirection } from "./directions";

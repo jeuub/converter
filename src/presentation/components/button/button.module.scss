@@ -1,27 +1,27 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .button {
-  padding: 8px  10px;
+  padding: 8px 10px;
   border: none;
   background: transparent;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 6px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
   outline: 1px solid transparent;
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
   }
 }
 
 .button:active {
-  transform: scale(.9);
+  transform: scale(0.9);
 }
 
 .filled {
   background: $color-button-regular;
-  color: $color-text-regular-inverse
+  color: $color-text-regular-inverse;
 }
 
 .text:hover {

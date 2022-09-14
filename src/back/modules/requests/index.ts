@@ -1,1 +1,1 @@
-export { getDirections, getFilteredDirections } from './getters';
+export { getDirections, getFilteredDirections } from "./getters";

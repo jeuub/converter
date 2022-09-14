@@ -1,29 +1,29 @@
-import {ClassName} from "@/global-types";
+import { ClassName } from "@/global-types";
 
 type ClassNameObject = {
-  [key:string]: boolean;
-}
+  [key: string]: boolean;
+};
 
 type TClsx = Array<ClassName | ClassNameObject>;
 
-export default function clsx (...classNames: TClsx):ClassName {
-  let resultClasses:Array<ClassName> = [];
+export default function clsx(...classNames: TClsx): ClassName {
+  const resultClasses: Array<ClassName> = [];
 
-  classNames.forEach(className => {
-    switch (typeof className){
-      case 'string':
-        resultClasses.push(className)
+  classNames.forEach((className) => {
+    switch (typeof className) {
+      case "string":
+        resultClasses.push(className);
         break;
-      case 'object':
-        Object.entries(className).forEach(classPare=>{
-          const [className, availability ] = classPare
-          if (availability){
-            resultClasses.push(className)
+      case "object":
+        Object.entries(className).forEach((classPare) => {
+          const [className, availability] = classPare;
+          if (availability) {
+            resultClasses.push(className);
           }
-        })
-        break
+        });
+        break;
     }
-  })
+  });
 
-  return resultClasses.join(' ')
+  return resultClasses.join(" ");
 }

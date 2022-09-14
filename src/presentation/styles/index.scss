@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'reset';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "variables";
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 html,
 body {
@@ -14,7 +14,7 @@ body {
   color: $color-text-regular;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   height: 100%;
 }
 
@@ -51,4 +51,3 @@ p:first-child {
 img {
   max-width: 100%;
 }
-

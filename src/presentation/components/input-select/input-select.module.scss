@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 .container {
   display: flex;
@@ -36,7 +36,7 @@
   border: 1px solid $color-border-regular;
   border-radius: 8px 0 0 8px;
   font-weight: 300;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   &:focus {
     outline: none;
@@ -72,7 +72,7 @@
   justify-content: center;
   align-items: center;
   background: transparent;
-  border:none;
+  border: none;
   cursor: pointer;
 
   & > img {

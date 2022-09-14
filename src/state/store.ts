@@ -1,17 +1,17 @@
-import {combineReducers, configureStore} from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 
-import {DirectionReducers} from './reducers';
+import { DirectionReducers } from "./reducers";
 
 const rootReducer = combineReducers({
-  DirectionReducers
-})
+  DirectionReducers,
+});
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
-  })
-}
+  });
+};
 
 export type RootState = ReturnType<typeof rootReducer>;
 export type AppStore = ReturnType<typeof setupStore>;
-export type AppDispatch = AppStore['dispatch'];
+export type AppDispatch = AppStore["dispatch"];

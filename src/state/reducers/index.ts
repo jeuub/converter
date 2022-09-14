@@ -1,1 +1,1 @@
-export {DirectionsSlice, DirectionReducers} from './directions-slice';
+export { DirectionsSlice, DirectionReducers } from "./directions-slice";

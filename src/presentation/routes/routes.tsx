@@ -1,7 +1,9 @@
-import {URL} from '@/constants';
+import React from "react";
 
-import {Main} from './main';
-import {Route} from "react-router-dom";
+import { URL } from "@/constants";
+
+import { Main } from "./main";
+import { Route } from "react-router-dom";
 
 type RouteType = {
   path: string;
@@ -11,12 +13,13 @@ type RouteType = {
 export const routes: RouteType[] = [
   {
     path: URL.MAIN,
-    element: Main
+    element: Main,
   },
 ];
 
-export const renderRoutes = () => ((routes: RouteType[]) => {
-  return routes.map((route: RouteType, idx: number) => {
-    return <Route key={idx} path={route.path} element={<route.element/>}/>;
-  });
-})(routes);
+export const renderRoutes = () =>
+  ((routes: RouteType[]) => {
+    return routes.map((route: RouteType, idx: number) => {
+      return <Route key={idx} path={route.path} element={<route.element />} />;
+    });
+  })(routes);

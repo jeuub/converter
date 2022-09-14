@@ -1,1 +1,1 @@
-export { getDirections, getFilteredDirections } from './requests'
+export { getDirections, getFilteredDirections } from "./requests";
