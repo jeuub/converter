@@ -1,0 +1,1 @@
+export { enumToDescriptedArray } from "./enumToArray";

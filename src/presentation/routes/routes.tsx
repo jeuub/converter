@@ -1,9 +1,10 @@
 import React from "react";
 
+import { Route } from "react-router-dom";
+
 import { URL } from "@/constants";
 
 import { Main } from "./main";
-import { Route } from "react-router-dom";
 
 type RouteType = {
   path: string;

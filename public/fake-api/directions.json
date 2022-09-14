@@ -1,34 +1,42 @@
 [
   {
     "code": "BTC",
-    "name": "Bitcoin BTC "
+    "name": "Bitcoin BTC ",
+    "tag": "crypto"
   },
   {
     "code": "ETH",
-    "name": "Ethereum ETH "
+    "name": "Ethereum ETH ",
+    "tag": "crypto"
   },
   {
     "code": "CASHUSD",
-    "name": "Наличные USD "
+    "name": "Наличные USD ",
+    "tag": "cash"
   },
   {
     "code": "CASHRUB",
-    "name": "Наличные RUB "
+    "name": "Наличные RUB ",
+    "tag": "cash"
   },
   {
     "code": "ACRUB",
-    "name": "Альфа-банк RUB "
+    "name": "Альфа-банк RUB ",
+    "tag": "bank"
   },
   {
     "code": "SBERRUB",
-    "name": "Сбербанк RUB "
+    "name": "Сбербанк RUB ",
+    "tag": "bank"
   },
   {
     "code": "TCSBRUB",
-    "name": "Тинькофф RUB "
+    "name": "Тинькофф RUB ",
+    "tag": "bank"
   },
   {
     "code": "USDTTRC",
-    "name": "Tether TRC20 USDT "
+    "name": "Tether TRC20 USDT ",
+    "tag": "crypto"
   }
 ]

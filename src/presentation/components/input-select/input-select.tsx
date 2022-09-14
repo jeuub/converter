@@ -12,8 +12,9 @@ type imageSrc = string;
 type OptionId = string | number;
 
 type SelectOption = {
-  image: imageSrc;
+  image?: imageSrc;
   id: OptionId;
+  content: string;
 };
 
 type InputSelectProps = {
@@ -55,7 +56,7 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
     const option = options[Number(defaultChecked)];
     if (!option) return;
     setCurrentOption(option);
-  }, []);
+  }, [options]);
 
   useEffect(() => {
     if (!onChange || !currentOption) return;
@@ -83,7 +84,11 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
       />
       <div className={styles.optionContainer} ref={currentOptionRef}>
         <button className={styles.currentOption} onClick={toggleActive}>
-          <img src={currentOption?.image} alt="" width={40} height={40} />
+          {currentOption?.image ? (
+            <img src={currentOption?.image} alt="" width={40} height={40} />
+          ) : (
+            <p>{currentOption?.content}</p>
+          )}
           {Icons("ARROW_DOWN")}
         </button>
         {active && (
@@ -94,7 +99,10 @@ export const InputSelect = (props: InputSelectProps): JSX.Element => {
                 className={styles.otherOption}
                 onClick={() => setNewOption(option)}
               >
-                <img src={option.image} alt="" width={40} height={40} />
+                {option.image && (
+                  <img src={option.image} alt="" width={40} height={40} />
+                )}
+                <p>{option.content}</p>
               </button>
             ))}
           </div>

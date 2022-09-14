@@ -7,8 +7,8 @@
 
 .currentOption {
   height: 40px;
-  width: 60px;
-  padding: 0;
+  width: fit-content;
+  padding: 0 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,7 @@
   border: 1px solid $color-border-regular;
   border-radius: 0 8px 8px 0;
   cursor: pointer;
+  gap: 5px;
 
   & > img {
     height: 30px;
@@ -25,6 +26,10 @@
   & > svg {
     width: 15px;
     height: 10px;
+  }
+
+  & > p {
+    margin: 0!important;
   }
 }
 
@@ -54,7 +59,9 @@
 .otherOptions {
   position: absolute;
   top: calc(100% + 5px);
-  left: 0;
+  width: 100%;
+  right: 0;
+  overflow: hidden;
   background: $white;
   border-radius: 8px;
   border: 1px solid $color-border-regular;
@@ -65,15 +72,19 @@
 }
 
 .otherOption {
-  height: 40px;
-  width: 60px;
-  padding: 0 15px 0 0;
+  min-height: 30px;
+  min-width: 60px;
+  width: 100%;
+  padding: 7.5px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
   border: none;
   cursor: pointer;
+  flex-direction: column;
+  background: $white;
+  transition: .2s;
 
   & > img {
     height: 30px;
@@ -83,5 +94,15 @@
   & > svg {
     width: 15px;
     height: 10px;
+  }
+
+  & > p {
+    margin: 0!important;
+  }
+  &:hover {
+    background: rgba($gray, .4);
+  }
+  &:has(img, p) {
+    padding: 5px 0;
   }
 }

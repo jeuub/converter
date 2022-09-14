@@ -52,6 +52,11 @@
   width: 100%;
 }
 
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+
 @media screen and (min-width: $medium) {
   .card {
     max-width: 500px;
